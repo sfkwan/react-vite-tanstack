@@ -9,11 +9,14 @@ import Dashboard from "./Dashboard.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DashboardItems from "./DashboardItems.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import AddPostComponent from "./AddPost.tsx";
 
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
+  { path: "/post", element: <AddPostComponent /> },
+
   { path: "/about", element: <About /> },
   { path: "/dashboard/", element: <Dashboard /> },
   { path: "/dashboard/:id", element: <DashboardItems /> },
