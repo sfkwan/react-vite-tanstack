@@ -1,7 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { PostSchema } from "./Post.schema";
-import { data } from "react-router-dom";
 
 const createPost = async (post: {
   userId: number;
@@ -54,7 +53,7 @@ function AddPostComponent() {
           <p>body: {data.body}</p>
         </div>
       )}
-      <button type="submit" disabled={isPending}>
+      <button color="blue" type="submit" disabled={isPending}>
         Create Post
       </button>
     </form>
